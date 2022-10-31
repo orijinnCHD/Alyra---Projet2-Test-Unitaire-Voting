@@ -9,6 +9,10 @@ on:
   pull_request:
     branches: [ "CI" ]
 
+env:
+    INFURA_ID: ${{env.INFURA_ID}}
+    PRIVATE_KEY: ${{env.PRIVATE_KEY}}
+
 jobs:
   build:
 
@@ -31,9 +35,7 @@ jobs:
       run: npm ci
       
     - name: build
-      env:
-        INFURA_ID: ${{env.INFURA_ID}}
-        PRIVATE_KEY: ${{env.PRIVATE_KEY}}
+      
       
       run: npm run build --if-present
       
