@@ -11,7 +11,8 @@ module.exports = {
   networks:{
     goerli:{
       url:`https://goerli.infura.io/v3/${process.env.INFURA_ID}`,
-      accounts: [process.env.PRIVATE_KEY],
+      accounts: [`0x${process.env._PRIVATE_KEY}`],
+      
     }
   },
   settings: {          // See the solidity docs for advice about optimization and evmVersion
