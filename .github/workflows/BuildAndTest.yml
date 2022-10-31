@@ -3,9 +3,7 @@
 
 name: BuildAndTest CI
 
-env:
-  INFURA_ID: $env.INFURA_ID
-  PRIVATE_KEY: $env.PRIVATE_KEY
+
 on:
   push:
     branches: [ "main" ]
@@ -34,7 +32,11 @@ jobs:
       run: npm ci
       
     - name: build
+      env:
+          INFURA_ID: $env.INFURA_ID
+          PRIVATE_KEY: $env.PRIVATE_KEY
       run: npm run build --if-present
+      
       
     - name: test
       run: npm test
