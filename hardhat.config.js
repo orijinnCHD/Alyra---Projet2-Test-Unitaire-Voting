@@ -11,7 +11,7 @@ module.exports = {
   networks:{
     goerli:{
       url:`https://goerli.infura.io/v3/${process.env.INFURA_ID}`,
-      accounts: [`0x${process.env._PRIVATE_KEY}`],
+      accounts: [`${process.env.PRIVATE_KEY}`],
       
     }
   },
