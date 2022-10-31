@@ -5,9 +5,9 @@ name: BuildAndTest CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "CI" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "CI" ]
 
 jobs:
   build:
