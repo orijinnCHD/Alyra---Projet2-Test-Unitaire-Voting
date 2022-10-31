@@ -3,6 +3,9 @@
 
 name: BuildAndTest CI
 
+env:
+  INFURA_ID: ${{process.env.INFURA_ID}}
+  PRIVATE_KEY: process.env.PRIVATE_KEY
 on:
   push:
     branches: [ "main" ]
