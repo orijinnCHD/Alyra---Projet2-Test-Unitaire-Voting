@@ -6,7 +6,9 @@ const{expect} = require('chai');
 
 
 contract("Voting",accounts =>{
-
+    
+    //----------------------variable help test ---------------------------------------------//    
+    
     const _owner=accounts[0];
     const _person1 =accounts[1];
     const _person2 =accounts[2];
@@ -23,7 +25,17 @@ contract("Voting",accounts =>{
 
     let votingInstance;
 
-
+    //------------------------------------Test ---------------------------------------------------//
+   
+    /* To understand the test of the smart contact, I have divided the test into 5 parts:
+    *the deployment
+    *the variables
+    *the core functions
+    *the requires
+    * the events
+    */
+    
+    // test if contract deployed proprely
     describe('---DEPLOYEMENT',function(){
 
         it('could DEPLOYED voting contract PROPRELY ',async()=>{
@@ -34,7 +46,8 @@ contract("Voting",accounts =>{
         })
     })
 
-
+    
+    //
     describe('--- START VARIABLE',function(){
         
         beforeEach(async()=>{
@@ -61,8 +74,16 @@ contract("Voting",accounts =>{
         })
 
     })
-
-
+    
+    //---------------------------Core function----------------------------------------------------//
+    
+       /*represent a function essential for create execution voting system:
+       * add a new voter
+       * add a new proposal
+       * set a vote
+       * result a tally votes
+       */
+    
     describe('--- CORE FUNCTION',function(){
         
         describe('-- ADD a new Voter',function(){
@@ -432,7 +453,9 @@ contract("Voting",accounts =>{
         })
 
     })
-
+    
+    //-------------------------------------------Require ---------------------------------------------------// 
+    
     describe('---REQUIRE',function(){
 
         describe( '-- NOT add a voter',function(){
@@ -471,6 +494,7 @@ contract("Voting",accounts =>{
 
         })
 
+        
         describe('-- NOT get a voter',function(){
 
             beforeEach(async()=>{
@@ -489,6 +513,7 @@ contract("Voting",accounts =>{
 
         })
 
+        
         describe('-- NOT add a proposal',function(){
             
             beforeEach(async()=>{
@@ -502,7 +527,6 @@ contract("Voting",accounts =>{
             })
 
             
-
             it('should NOT add a proposal in array if you are NOT a voter, REVERT if that TRUE', async () =>{
 
                 
@@ -531,6 +555,7 @@ contract("Voting",accounts =>{
 
         })
 
+        
         describe('-- NOT get a proposal',function(){
 
             beforeEach(async()=>{
@@ -823,6 +848,10 @@ contract("Voting",accounts =>{
         })
     })
 
+    
+    //--------------------------------Events-------------------------------------------------------//
+    
+    
     describe('---EVENTS',function(){
 
 
