@@ -1,3 +1,4 @@
+
 require("@nomicfoundation/hardhat-toolbox");
 require("hardhat-gas-reporter");
 require('solidity-coverage');
@@ -5,16 +6,23 @@ require("@nomiclabs/hardhat-truffle5");
 require('dotenv').config();
 
 
-/** @type import('hardhat/config').HardhatUserConfig */
-module.exports = {
-  solidity: "0.8.17",
-  /*networks:{
-    goerli:{
-      url:`https://goerli.infura.io/v3/${process.env.INFURA_ID}`,
-      accounts: [`${process.env.PRIVATE_KEY}`],
-      
+const GOERLI_RPC_URL = process.env.GOERLI_URL || "";
+const PRIVATE_KEY = process.env.PRIVATE_KEY || "";
+
+module.exports ={
+  solidity:"0.8.17",
+  defaultNetwork:"hardhat",
+  networks:{
+    /*goerli:{
+      url:GOERLI_RPC_URL,
+      accounts:[`0x${PRIVATE_KEY}`],
+      chaindId:5
+    },*/
+    localhost:{
+      url:"http://127.0.0.1:8545",
+      chainId:31337
     }
-  },*/
+  },
   settings: {          // See the solidity docs for advice about optimization and evmVersion
     optimizer: {
       enabled: false,
@@ -26,6 +34,4 @@ module.exports = {
     enabled:true,
     currency:'USD'
  },
-
-
-};
+}
