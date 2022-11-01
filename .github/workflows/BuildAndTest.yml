@@ -6,9 +6,9 @@ name: BuildAndTest CI
 
 on:
   push:
-    branches: [ "CI" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "CI" ]
+    branches: [ "main" ]
 
 env:
     INFURA_ID: ${{secrets.INFURA_ID}}
