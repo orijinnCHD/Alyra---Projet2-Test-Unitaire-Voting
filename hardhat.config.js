@@ -35,36 +35,3 @@ module.exports ={
     currency:'USD'
  },
 }
-/**@type import('hardhat/config').HardhatUserConfig*/
-//module.exports ={config};
-
-/** @type import('hardhat/config').HardhatUserConfig */
-/*module.exports = {
-  solidity: "0.8.17",
-<<<<<<< HEAD
-  defaultNetwork:"hardhat",
-  networks:{
-=======
-  /*networks:{
->>>>>>> main
-    goerli:{
-      url:`https://goerli.infura.io/v3/${process.env.INFURA_ID}`,
-      accounts: [`${process.env.PRIVATE_KEY}`],
-      
-    }
-  },*/
-  settings: {          // See the solidity docs for advice about optimization and evmVersion
-    optimizer: {
-      enabled: false,
-      runs: 200
-    },
-
-   },
-  gasReporter:{
-    enabled:true,
-    currency:'USD'
- },
-
-
-};
-*/
