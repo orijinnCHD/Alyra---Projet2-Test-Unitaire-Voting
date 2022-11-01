@@ -13,11 +13,11 @@ module.exports ={
   solidity:"0.8.17",
   defaultNetwork:"hardhat",
   networks:{
-    goerli:{
+    /*goerli:{
       url:GOERLI_URL,
       accounts:[PRIVATE_KEY],
       chaindId:5
-    },
+    },*/
     localhost:{
       url:"http://127.0.0.1:8545",
       chainId:31337
