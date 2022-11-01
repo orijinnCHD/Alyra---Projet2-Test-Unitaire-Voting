@@ -15,7 +15,7 @@ module.exports ={
   networks:{
     goerli:{
       url:GOERLI_URL,
-      accounts:[PRIVATE_KEY],
+      accounts:[`0x${PRIVATE_KEY}`],
       chaindId:5
     },
     localhost:{
