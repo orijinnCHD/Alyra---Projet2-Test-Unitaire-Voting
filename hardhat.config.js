@@ -6,7 +6,7 @@ require("@nomiclabs/hardhat-truffle5");
 require('dotenv').config();
 
 
-const GOERLI_RPC_URL = process.env.GOERLI_URL;
+const GOERLI_URL = process.env.GOERLI_URL;
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
 
 module.exports ={
@@ -14,7 +14,7 @@ module.exports ={
   defaultNetwork:"hardhat",
   networks:{
     goerli:{
-      url:GOERLI_RPC_URL,
+      url:GOERLI_URL,
       accounts:[PRIVATE_KEY],
       chaindId:5
     },
