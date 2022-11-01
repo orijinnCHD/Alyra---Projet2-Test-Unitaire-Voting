@@ -86,6 +86,8 @@ contract("Voting",accounts =>{
     
     describe('--- CORE FUNCTION',function(){
         
+         //------------------------------------Core function : add a new voter ---------------------------------------------------//
+        
         describe('-- ADD a new Voter',function(){
 
             beforeEach(async()=>{
@@ -140,7 +142,9 @@ contract("Voting",accounts =>{
 
         })
 
-
+        
+        //------------------------------------Core function : ADD a new proposal ---------------------------------------------------//
+        
         describe('-- ADD a new proposal',function(){
 
             beforeEach(async()=>{
@@ -216,7 +220,10 @@ contract("Voting",accounts =>{
 
         })
 
-
+        
+        //------------------------------------Core function : SET a vote ---------------------------------------------------//
+        
+        
         describe('-- SET a vote', function(){
 
             beforeEach(async()=>{
@@ -338,7 +345,10 @@ contract("Voting",accounts =>{
 
 
         })
-
+        
+        
+        //------------------------------------Core function : RESULT a tally votes ---------------------------------------------------//
+        
         describe('-- RESULT a tally votes',function(){
 
             beforeEach(async()=>{
@@ -457,7 +467,10 @@ contract("Voting",accounts =>{
     //-------------------------------------------Require ---------------------------------------------------// 
     
     describe('---REQUIRE',function(){
-
+        
+        
+        //------------------------------------Require : NOT add a voter ---------------------------------------------------//
+        
         describe( '-- NOT add a voter',function(){
 
             beforeEach(async()=>{
@@ -495,6 +508,9 @@ contract("Voting",accounts =>{
         })
 
         
+        //------------------------------------Require : NOT get a voter ---------------------------------------------------//
+        
+        
         describe('-- NOT get a voter',function(){
 
             beforeEach(async()=>{
@@ -512,7 +528,9 @@ contract("Voting",accounts =>{
             })
 
         })
-
+        
+        
+        //------------------------------------Require : NOT add a proposal ---------------------------------------------------//
         
         describe('-- NOT add a proposal',function(){
             
@@ -556,6 +574,8 @@ contract("Voting",accounts =>{
         })
 
         
+        //------------------------------------Require : NOT get a proposal ---------------------------------------------------//
+        
         describe('-- NOT get a proposal',function(){
 
             beforeEach(async()=>{
@@ -573,6 +593,10 @@ contract("Voting",accounts =>{
             })
 
         })
+        
+        
+        //------------------------------------Require : NOT set a vote ---------------------------------------------------//
+        
 
         describe('-- NOT set a vote',function(){
 
@@ -634,7 +658,9 @@ contract("Voting",accounts =>{
 
 
         })
-
+        
+         //------------------------------------Require : Not result a tallyvotes ---------------------------------------------------//
+        
         describe('-- Not result a tallyvotes',function(){
 
             beforeEach(async()=>{
@@ -681,6 +707,8 @@ contract("Voting",accounts =>{
             
             })
         })
+        
+        //------------------------------------Require : NOT start a Workflow status ---------------------------------------------------//
        
         describe( '-- NOT start a Workflow status', function(){
 
@@ -853,7 +881,8 @@ contract("Voting",accounts =>{
     
     
     describe('---EVENTS',function(){
-
+        
+        //--------------------------------Events : EMIT an event WHEN add a voter-------------------------------------------------------//
 
         describe('-- EMIT an event WHEN add a voter',function(){
 
@@ -871,7 +900,9 @@ contract("Voting",accounts =>{
     
 
         })
-
+        
+        //--------------------------------Events : EMIT an event WHEN add a proposal-------------------------------------------------------//
+        
         describe('-- EMIT an event WHEN add a proposal',function(){
 
             beforeEach(async()=>{
@@ -890,6 +921,8 @@ contract("Voting",accounts =>{
     
 
         })
+        
+        //--------------------------------Events : EMIT an event WHEN set a vote-------------------------------------------------------//
 
         describe('-- EMIT an event WHEN set a vote',function(){
 
@@ -918,6 +951,8 @@ contract("Voting",accounts =>{
     
 
         })
+        
+         //--------------------------------Events : EMIT an event WHEN END process a workflow status-------------------------------------------------------//
 
         describe('-- EMIT an event WHEN END process a workflow status',function(){
 
