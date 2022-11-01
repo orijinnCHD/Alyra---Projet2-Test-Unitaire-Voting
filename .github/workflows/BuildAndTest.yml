@@ -11,7 +11,7 @@ on:
     branches: [ "main" ]
 
 env:
-    INFURA_ID: ${{secrets.INFURA_ID}}
+    GOERLI_URL: ${{secrets.GOERLI_URL}}
     PRIVATE_KEY: ${{secrets.PRIVATE_KEY}}
 
 jobs:
