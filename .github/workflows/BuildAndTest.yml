@@ -10,10 +10,6 @@ on:
   pull_request:
     branches: [ "CI" ]
 
-env:
-    INFURA_ID: ${{secrets.INFURA_ID}}
-    PRIVATE_KEY: ${{secrets.PRIVATE_KEY}}
-
 jobs:
   build:
 
